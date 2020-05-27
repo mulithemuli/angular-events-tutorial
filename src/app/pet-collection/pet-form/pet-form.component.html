@@ -1,0 +1,24 @@
+<div>
+  <div class="inner-container">
+    <div class="row">
+      <label for="pet_name">Name</label>
+      <input id="pet_name" [(ngModel)]="currentPet.name">
+    </div>
+    <div class="row">
+      <label for="pet_animal">Animal</label>
+      <select id="pet_animal" [(ngModel)]="currentPet.animal">
+        <option ngValue="dog">Dog</option>
+        <option ngValue="cat">Cat</option>
+        <option ngValue="bird">Bird</option>
+      </select>
+    </div>
+    <div class="row">
+      <label for="pet_color">Color</label>
+      <input id="pet_color" [(ngModel)]="currentPet.color">
+    </div>
+    <div class="row">
+      <button (click)="savePet()">Save a new pet</button>
+      <button (click)="resetPet()">Reset form</button>
+    </div>
+  </div>
+</div>

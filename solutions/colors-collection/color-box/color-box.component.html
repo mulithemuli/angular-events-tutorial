@@ -1,0 +1,13 @@
+<div class="color-box" style="background-color: {{color}};">
+  <p>Hi there I'm pretty shiny!</p>
+  <div class="inner-container">
+    <div class="row">
+      <label for="color_{{myNumber}}">My Color</label>
+      <input id="color_{{myNumber}}" [(ngModel)]="color" type="color" (ngModelChange)="changeColor()">
+    </div>
+    <div class="row">
+      <label for="master_{{myNumber}}">Master</label>
+      <input id="master_{{myNumber}}" [(ngModel)]="master" type="checkbox">
+    </div>
+  </div>
+</div>

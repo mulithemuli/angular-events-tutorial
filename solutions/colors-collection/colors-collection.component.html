@@ -1,0 +1,21 @@
+<h2>Lesson two - choosing colors</h2>
+<p>
+  There exists a dynamic list of colored boxes (<code>&lt;app-color-box&gt;</code>). The color of each box can be set
+  individually via the colorpicker inside. Changing its color changes the color of the colored box. Besides the
+  colorpicker there is a checkbox called master.
+</p>
+<p>
+  The <strong>task</strong> is to implement a feature when the master checkbox is checked the color of all the other
+  boxes changes with the change of the master box.<br>
+  When there are multiple masters the last change applies to all the color boxes.
+</p>
+<div class="inner-container">
+  <div class="row">
+    <label for="box_count">Box Count</label>
+    <input id="box_count" [(ngModel)]="boxCount" type="number" min="1">
+  </div>
+</div>
+<div *ngFor="let i of boxes">
+  <h3>Hi, I'm the {{i + 1 | formatOrder}} shiniest box in the world</h3>
+  <app-color-box [myNumber]="i"></app-color-box>
+</div>

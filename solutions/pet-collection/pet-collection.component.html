@@ -1,0 +1,36 @@
+<h2>Lesson one - adding pets</h2>
+<p>
+  This lesson covers two tasks.
+</p>
+<p>
+  The <strong>first task</strong> is to enter some data into the form provided in <code>&lt;app-pet-form&gt;</code>.
+  The data entered there should be added to the list of animals inside this component,
+  <code>&lt;app-pet-collection&gt;</code>.<br>
+  What makes this interaction possible?
+</p>
+<p>
+  The <strong>second task</strong> is to select an animal in the table which will then show up inside the form below.
+  Here the properties can be changed. The second button should reset the form and a new animal can be added without
+  modifying existing ones. This one is a bit tricky and you should consider using events instead of just setting values.
+</p>
+<p>
+  The <strong>Bonus task</strong> is to sort the animal list. Even for new animals.
+</p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Animal</th>
+      <th>Color</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let pet of pets">
+      <td><button (click)="editPet(pet)" title="Edit {{pet.name}}">{{pet.name}}</button></td>
+      <td>{{pet.animal}}</td>
+      <td>{{pet.color}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<app-pet-form (petToAdd)="addPet($event)" (formReset)="currentPet = $event" [currentPet]="currentPet"></app-pet-form>

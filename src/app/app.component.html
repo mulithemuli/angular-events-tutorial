@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>Some Event examples</h1>
+  <p>
+    All these tasks can be completed with pure angular interaction.<br>
+    To take a look at <code>EventEmitter</code> and <code>Subject</code> would be a good idea.<br>
+    Both of these objects make use of the publisher-subscriber pattern.
+  </p>
+  <p>
+    It is allowed to add <code>@Input()</code> and <code>@Output</code> attributes to the components or use a service
+    providing a <code>Subject</code> to interact between components.
+  </p>
+  <p>
+    And by the way - it is not allowed to modify app-component or create new components (for workarounds to pass data).
+    There exists an empty service, <code>MessengerService</code> which could (and probably should) be used to provide a
+    place for the publisher-subscriber pattern.
+  </p>
+  <app-pet-collection></app-pet-collection>
+  <app-colors-collection></app-colors-collection>
+</div>
