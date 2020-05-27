@@ -1,6 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {RandomColorGenerator} from '../colors-collection.component';
-import {MessengerService} from '../../service/messenger.service';
 
 @Component({
   selector: 'app-color-box',
@@ -13,6 +12,8 @@ export class ColorBoxComponent implements OnInit {
   myNumber: number; // required to allow unique ids for the labels and inputs
 
   master: boolean;
+
+  notInterested: boolean;
 
   color: string;
 
@@ -31,5 +32,13 @@ export class ColorBoxComponent implements OnInit {
       return;
     }
     // TODO task: inform the other boxes about the change and let them adapt to it.
+  }
+
+  changeInterest() {
+    if (this.notInterested) {
+      // TODO task #2: what to do when we do not want to receive any color changes?
+    } else {
+      // TODO task #2: what to do when we are interested again?
+    }
   }
 }

@@ -10,6 +10,7 @@ import {Component, Pipe, PipeTransform} from '@angular/core';
 })
 export class ColorsCollectionComponent {
 
+
   boxCount = 4;
 
   get boxes() {

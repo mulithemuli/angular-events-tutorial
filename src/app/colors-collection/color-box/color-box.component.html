@@ -9,5 +9,9 @@
       <label for="master_{{myNumber}}">Master</label>
       <input id="master_{{myNumber}}" [(ngModel)]="master" type="checkbox">
     </div>
+    <div class="row">
+      <label for="not_interested_{{myNumber}}">not interested</label>
+      <input id="not_interested_{{myNumber}}" [(ngModel)]="notInterested" type="checkbox" (ngModelChange)="changeInterest()">
+    </div>
   </div>
 </div>
